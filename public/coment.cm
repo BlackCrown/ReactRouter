@@ -1,0 +1,59 @@
+### React Router ###
+
+React router é um plugin gerencia a pagina atual q esta sendo mostrada na tela!!!
+Instale o plugin usando o comando abaixo:
+  npm install react-router-dom
+
+Os imports necessários para uso do plug in são:
+  import { BrowserRouter, Routes, Route } from 'react-router-dom';
+Basta importalos no top do seu arquivo App.jsx para utilização.
+  BrowserRouter: é o component que deve envolver todo o aplicativo q vai depender da utilização do router
+  Routes: as rotas especificas sã oenvolvidas por esse componente.
+  Route: é a rout/ caminho do que vai ser renderizado
+
+Tudo que estiver fora do component Routes, será renderizado em todas as páginas do site, como Footer/ Header/ Menu, devem ser colocados fora desse component
+  
+  function App() {
+  return (
+    <BrowserRouter>
+      <Header />
+      <h1>Router 1</h1>
+      <Routes>
+      <Route path="/" element{<Home />}/>
+      <Route path="sobre" element={<Sobre />} />
+      Route path="contato" element={<Contato />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
+}
+  Dentro de Routes, usando o component Rout podemos indicar qual página/ componet e seu caminho e o mesmo será renderizado apenas quando for solicitado através da mudança de url da página:
+    http://localhost:5173/Sobre 
+      /* Mostrará apenas a pagina Sobre */
+
+Com uso do component Link do react Router, podemos navegar entre páginas sem renderizar novamente toda a página ou recarrega-la, tornando assim a navegação mais fluida e rápida.
+Import o component no topo da página onde há o link:
+  import { Link } from 'react-router-dom';
+
+  No link que fará uso do component utilize-o da seguinte forma:
+      <Link to="/">Home</Link>
+      <Link to="sobre">Sobre</Link>
+      <Link to="contato">Contato</Link>
+
+  Navlink tem o mesmo proposito de link, com a diferença de adicionar a classe 'Ativo' no link atualmente ativo no site:
+    import:
+      import { NavLink } from 'react-router-dom';
+
+        <nav>
+      <NavLink to="/" end activeStyle={{ color: 'tomato' }}>
+        Home
+      </NavLink>
+      <NavLink to="sobre" activeStyle={{ color: 'tomato' }}>
+        Sobre
+      </NavLink>
+      <NavLink to="contato" activeStyle={{ color: 'tomato' }}>
+        Contato
+      </NavLink>
+    </nav>
+
+      A property end, deve ser utilizada na página Home/ inicial, devido ao uso de '/' para indicar a mesma
