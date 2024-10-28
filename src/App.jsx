@@ -1,7 +1,9 @@
 import React from 'react';
-import Contato from './Contato';
-import Produtos from './Produtos';
+import Contato from './Modules/Contato';
+import Produtos from './Modules/Produtos';
+import ProdutoDescricao from './Modules/ProdutoDescricao';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './Modules/Header';
 
 // Utilize a API abaixo para puxar a lista de produto
 // https://ranekapi.origamid.dev/json/api/produto
@@ -11,10 +13,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
-      <h1>Router 1</h1>
+      <Header />
       <Routes>
+        <Route path="produtos" element={<Produtos />} />
         <Route path="contato" element={<Contato />} />
-        <Route path="produtos/:id/*" element={<Produtos />} />
+        <Route path="produtos/:id" element={<Produtos />} />
       </Routes>
     </BrowserRouter>
   );
