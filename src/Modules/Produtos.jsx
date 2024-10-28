@@ -44,7 +44,7 @@ const Produtos = () => {
         </div>
       </div>
     );
-  } else {
+  } else if (produto.length !== 0) {
     return (
       <div>
         <h3>{produto.nome}</h3>
