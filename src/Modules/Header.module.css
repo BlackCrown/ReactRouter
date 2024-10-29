@@ -1,0 +1,31 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  background-color: #def3fc;
+  border-radius: 0 0 32px 32px;
+  margin: 0 -2rem;
+  padding: 0 2rem;
+  overflow: visible;
+  border-right: 4px solid #aec6cf;
+  border-left: 4px solid #aec6cf;
+}
+nav{
+  display: flex;
+  margin-top: 1px;
+}
+
+li {
+  padding: 0 .3rem;
+}
+li a {
+  background-color: #cee7f2;
+  border: 2px solid #aec6cf;
+  padding: .5rem;
+  border-radius: .8rem;
+}
+
+li a:hover {
+  background-color: #def3fc;
+  border: 2px solid #7a8d99;
+}

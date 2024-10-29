@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import Contato from './Modules/Contato';
 import Produtos from './Modules/Produtos';
 import Home from './Modules/Home';

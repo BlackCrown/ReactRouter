@@ -1,9 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import styles from './Header.module.css';
 
 function Header() {
   return (
-    <div>
+    <div className={styles.nav}>
       <h3>Loja Vava</h3>
       <nav>
         <li>

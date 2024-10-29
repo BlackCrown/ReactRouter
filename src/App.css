@@ -1,0 +1,13 @@
+li, li a{
+  text-decoration: none;
+  color: black;
+  list-style: none;
+}
+body{
+  margin: 0 2rem;
+  background-color: #ebf6fa;
+}
+
+img{
+  width: 100%;
+}

@@ -1,0 +1,28 @@
+.container{
+  background-color: #def3fc;
+  border-right: 2px solid #aec6cf;
+  border-left: 2px solid #aec6cf;
+  border-bottom: 2px solid #aec6cf;
+  margin: 0 -.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  display: grid;
+  grid-template-areas: 
+  'titulo titulo titulo'
+  'img img text'
+  ;
+}
+
+.titulo {
+  grid-area: titulo;
+  text-align: center;
+  margin: .5rem 0;
+}
+
+.img {
+  grid-area: img;
+}
+
+.text {
+  grid-area: text;
+}
