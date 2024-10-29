@@ -1,17 +1,16 @@
 import React from 'react';
+import styles from './Contato.module.css';
 import foto from '../img/contato.jpg';
 
 const Contato = () => {
   return (
     <>
-      <h3>Contato</h3>
-      <div style={{ maxWidth: '300px' }}>
-        <img
-          style={{ maxWidth: '100%' }}
-          src={foto}
-          alt="maquina de escrever"
-        ></img>
-        <div>
+      <div className={styles.container}>
+        <h3 className={styles.titulo}>Contato</h3>
+        <div className={styles.img}>
+          <img src={foto} alt="maquina de escrever"></img>
+        </div>
+        <div className={styles.content}>
           <h2>Entre em contato!</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic,

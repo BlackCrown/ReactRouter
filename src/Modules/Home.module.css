@@ -16,11 +16,12 @@
 .titulo {
   grid-area: titulo;
   text-align: center;
-  margin: .5rem 0;
+  margin: 0 0 .8rem 0;
 }
 
 .img {
   grid-area: img;
+  margin-right: 1rem;
 }
 
 .text {
